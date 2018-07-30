@@ -2,13 +2,13 @@
 <addon id="repository.teamrtd" name="TEAMRTD Repo" version="1.0.1" provider-name="R.ORTEGA">
 	<extension point="xbmc.addon.repository" name="CHANGEME Repository">
 		<dir>
-			<info compressed="false">https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/</datadir>
+			<info compressed="false">https://github.com/rickyflash/repository.teamrtd/tree/master/zips/repository.teamrtd/addon.xml</info>
+			<checksum>https://github.com/rickyflash/repository.teamrtd/tree/master/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://github.com/rickyflash/repository.teamrtd/tree/master/zips</datadir>
 		</dir>
-		<info compressed="false">https://raw.githubusercontent.com/rickyflash/repository.teamrtd/master/zips/addons.xml</info>
-		<checksum>https://raw.githubusercontent.com/rickyflash/repository.CHANGEME/master/zips/addons.xml.md5</checksum>
-		<datadir zip="true">https://raw.githubusercontent.com/rickyflash/repository.teamrtd/master/zips/</datadir>
+		<info compressed="false">https://github.com/rickyflash/repository.teamrtd/tree/master/zips/addon.xml</info>
+		<checksum>https://github.com/rickyflash/repository.teamrtd/tree/master/zips/repository.teamrtd/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/rickyflash/repository.teamrtd/tree/master/zips</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">TEAMRTD REPO</summary>
