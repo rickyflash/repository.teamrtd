@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="plugin.video.TeamRTD"
+  version="2018.04.29"
+  name="TeamRTD"
+  provider-name="TeamRTD">
+  <requires>
+   <import addon="xbmc.python" version="2.14.0"/>
+   <import addon="script.module.dateutil" />
+   <import addon="script.module.simplejson" />
+   <import addon="script.module.six" />
+   <import addon="script.module.requests" />
+   <import addon="script.module.streamlink.base" />
+   <import addon="plugin.video.f4mTester" />
+  </requires>
+  <extension 
+    point="xbmc.python.pluginsource"
+    library="default.py">
+   <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service/streamlink_proxy.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">TeamRTD</summary>
+    <description lang="en">[I]There can only be one.[/I][CR][CR]Unofficial Kodi Addon.</description>
+    <disclaimer lang="en">There can only be one.</disclaimer>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 1, July 2018</license>
+    <platform>all</platform>
+  </extension>
+</addon>

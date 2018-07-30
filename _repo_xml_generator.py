@@ -21,7 +21,7 @@ class Generator:
     """
     def __init__(self):
 # Create the zips folder if it doesn't already exist
-        zips_path = ('zips')
+        zips_path = ('zip')
         if not os.path.exists(zips_path):
             os.makedirs(zips_path)
 
@@ -31,11 +31,11 @@ class Generator:
 
     def Create_Zips(self,addon_id,version):
         xml_path     = os.path.join(addon_id,'addon.xml')
-        addon_folder = os.path.join('zips',addon_id)
+        addon_folder = os.path.join('zip',addon_id)
         if not os.path.exists(addon_folder):
             os.makedirs(addon_folder)
 
-        final_zip = os.path.join('zips',addon_id,'%s-%s.zip' % (addon_id,version))
+        final_zip = os.path.join('zip',addon_id,'%s-%s.zip' % (addon_id,version))
         if not os.path.exists(final_zip):
             print "NEW ADD-ON - Creating zip for: %s v.%s" % (addon_id,version)
             zip = zipfile.ZipFile(final_zip, 'w', compression=zipfile.ZIP_DEFLATED )
@@ -66,7 +66,7 @@ class Generator:
 # loop thru and add each addons addon.xml file
         for addon in addons:
             try:
-                if (not os.path.isdir(addon) or addon == "zips" or addon.startswith('.')): continue
+                if (not os.path.isdir(addon) or addon == "zip" or addon.startswith('.')): continue
                 _path = os.path.join( addon, "addon.xml" )
                 xml_lines = open( _path, "r" ).read().splitlines()
                 addon_xml = ""
@@ -89,12 +89,12 @@ class Generator:
 
 # clean and add closing tag
         addons_xml = addons_xml.strip() + u"\n</addons>\n"
-        self._save_file(addons_xml.encode( "utf-8" ), file=os.path.join('zips','addons.xml'))
+        self._save_file(addons_xml.encode( "utf-8" ), file=os.path.join('zip','addons.xml'))
 
     def _generate_md5_file(self):
         try:
-            m = md5.new(open(os.path.join('zips','addons.xml')).read()).hexdigest()
-            self._save_file(m, file=os.path.join('zips','addons.xml.md5'))
+            m = md5.new(open(os.path.join('zip','addons.xml')).read()).hexdigest()
+            self._save_file(m, file=os.path.join('zip','addons.xml.md5'))
         except Exception, e:
             print "An error occurred creating addons.xml.md5 file!\n%s" % (e)
 
